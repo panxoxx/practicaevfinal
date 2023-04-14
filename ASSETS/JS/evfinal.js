@@ -13,7 +13,7 @@ function tabla(datos) {
         contenido.innerHTML += `
          <tr>
             <td>${temp.name}</td> 
-            <td><img src="${temp.img}" width="50px"></td> 
+            <td><img src="${temp.img}" width="80px" data-src="${temp.img.replaceAll("thumbnail", "fullsize",)}" class="imagenTabla"></td> 
             <td>${temp.level}</td> 
          </tr>        
          `
@@ -46,3 +46,10 @@ formulario.addEventListener("click", (e) => {
                   `
              }
         }
+
+        $(document).on("click", ".imagenTabla", function() {
+            var src = $(this).attr("data-src");
+            $("#imagenModal").attr("src", src);
+            $("#modalImagen").modal("show");
+        });
+        

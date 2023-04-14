@@ -11,7 +11,10 @@ body{
 
 }
  th,td{
-    text-align: center;    
+    text-align: center; 
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle; 
 
  }
 
@@ -20,4 +23,7 @@ body{
 }
 #contenido2{
     background-color: rgb(129, 203, 25);
+}
+.modal-body{
+    margin: auto;
 }
